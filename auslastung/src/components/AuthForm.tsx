@@ -25,6 +25,12 @@ export function AuthForm() {
     setError('');
     setSubmitting(true);
 
+    if (!supabase) {
+      setError('Anmeldung ist nicht konfiguriert (Supabase fehlt).');
+      setSubmitting(false);
+      return;
+    }
+
     try {
       const hash = await hashKeyword(keyword);
       if (hash !== KEYWORD_HASH) {
