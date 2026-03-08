@@ -50,6 +50,7 @@ jobs:
           path: auslastung/dist
 
   deploy:
+    if: github.repository == 'rathe007/ClaudeTest'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
