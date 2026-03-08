@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd auslastung && npm ci && npm run build",
-  "outputDirectory": "auslastung/dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
